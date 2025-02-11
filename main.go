@@ -1,7 +1,7 @@
 package main
 
 import (
-	"be-post/backend/handler"
+	"be-post/handler"
 	"be-post/post"
 	"fmt"
 	"log"
@@ -46,7 +46,7 @@ func main() {
 
 	router := gin.Default()
 	router.Use(cors.Default())
-
+	
 	router.GET("/ping", func(c *gin.Context) {
         c.JSON(200, gin.H{
             "message": "pong",
